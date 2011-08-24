@@ -19,6 +19,9 @@
 		0D2DCB4013EFFFE9009CAE48 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DCB3E13EFFFE9009CAE48 /* SettingsController.m */; };
 		0D2DCB4113EFFFE9009CAE48 /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DCB3F13EFFFE9009CAE48 /* SettingsController.xib */; };
 		0D2DCB4413F00766009CAE48 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DCB4313F00766009CAE48 /* Factory.m */; };
+		0DD3EE9C14056EF50037B284 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD3EE9B14056EF50037B284 /* AVFoundation.framework */; };
+		0DD3EEA0140572360037B284 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD3EE9E140572360037B284 /* Default-Landscape.png */; };
+		0DD3EEA1140572360037B284 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD3EE9F140572360037B284 /* Default-Portrait.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		0D2DCB3F13EFFFE9009CAE48 /* SettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsController.xib; path = "Main Screen/SettingsController.xib"; sourceTree = SOURCE_ROOT; };
 		0D2DCB4213F00766009CAE48 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Factory.h; path = Application/Factory.h; sourceTree = SOURCE_ROOT; };
 		0D2DCB4313F00766009CAE48 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Factory.m; path = Application/Factory.m; sourceTree = SOURCE_ROOT; };
+		0DD3EE9B14056EF50037B284 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0DD3EE9E140572360037B284 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape.png"; path = "../Resources/Default-Landscape.png"; sourceTree = "<group>"; };
+		0DD3EE9F140572360037B284 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "../Resources/Default-Portrait.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DD3EE9C14056EF50037B284 /* AVFoundation.framework in Frameworks */,
 				0D2DCAF913EFFB07009CAE48 /* UIKit.framework in Frameworks */,
 				0D2DCAFB13EFFB07009CAE48 /* Foundation.framework in Frameworks */,
 				0D2DCAFD13EFFB07009CAE48 /* CoreGraphics.framework in Frameworks */,
@@ -80,6 +87,7 @@
 		0D2DCAF713EFFB07009CAE48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0DD3EE9B14056EF50037B284 /* AVFoundation.framework */,
 				0D2DCAF813EFFB07009CAE48 /* UIKit.framework */,
 				0D2DCAFA13EFFB07009CAE48 /* Foundation.framework */,
 				0D2DCAFC13EFFB07009CAE48 /* CoreGraphics.framework */,
@@ -114,6 +122,8 @@
 		0D2DCB3913EFFDEB009CAE48 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0DD3EE9E140572360037B284 /* Default-Landscape.png */,
+				0DD3EE9F140572360037B284 /* Default-Portrait.png */,
 				0D2DCB3B13EFFDFA009CAE48 /* bell.mp3 */,
 			);
 			name = Resources;
@@ -183,6 +193,8 @@
 				0D2DCB2113EFFCE8009CAE48 /* MainScreenController.xib in Resources */,
 				0D2DCB3C13EFFDFA009CAE48 /* bell.mp3 in Resources */,
 				0D2DCB4113EFFFE9009CAE48 /* SettingsController.xib in Resources */,
+				0DD3EEA0140572360037B284 /* Default-Landscape.png in Resources */,
+				0DD3EEA1140572360037B284 /* Default-Portrait.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

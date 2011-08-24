@@ -4,16 +4,27 @@
 @interface MainScreenController ()
 @property(retain) NSTimer *timer;
 @property(assign) NSUInteger secondsRemaining;
+@property(retain) AVAudioPlayer *bellSound;
 @end
 
 @implementation MainScreenController
-@synthesize timeLabel, settingsController, timer, secondsRemaining;
+@synthesize timeLabel, settingsController, timer, secondsRemaining, bellSound;
+
+#pragma mark Initialization
+
+- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"bell" withExtension:@"mp3"];
+    [self setBellSound:[[[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:NULL] autorelease]];
+}
 
 - (void) dealloc
 {
     [timer release];
     [timeLabel release];
     [settingsController release];
+    [bellSound release];
     [super dealloc];
 }
 
@@ -50,6 +61,7 @@
     secondsRemaining--;
     [self updateUI];
     if (secondsRemaining == 0) {
+        [bellSound play];
         [self stopCurrentTalk];
     }
 }
@@ -67,6 +79,7 @@
     NSParameterAssert(![self talkInProgress]);
     [self setSecondsRemaining:[settingsController fullTalkMinutes]*60];
     [settingsController setTimeRunning:YES];
+    [bellSound prepareToPlay];
     [self setTimer:[NSTimer scheduledTimerWithTimeInterval:1 target:self
         selector:@selector(updateTime) userInfo:nil repeats:YES]];
 }
