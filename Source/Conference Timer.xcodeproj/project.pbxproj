@@ -22,6 +22,7 @@
 		0DD3EE9C14056EF50037B284 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD3EE9B14056EF50037B284 /* AVFoundation.framework */; };
 		0DD3EEA0140572360037B284 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD3EE9E140572360037B284 /* Default-Landscape.png */; };
 		0DD3EEA1140572360037B284 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD3EE9F140572360037B284 /* Default-Portrait.png */; };
+		0DD3EEA3140573B70037B284 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD3EEA2140573B70037B284 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		0DD3EE9B14056EF50037B284 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0DD3EE9E140572360037B284 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape.png"; path = "../Resources/Default-Landscape.png"; sourceTree = "<group>"; };
 		0DD3EE9F140572360037B284 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "../Resources/Default-Portrait.png"; sourceTree = "<group>"; };
+		0DD3EEA2140573B70037B284 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Resources/Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		0D2DCB3913EFFDEB009CAE48 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0DD3EEA2140573B70037B284 /* Icon.png */,
 				0DD3EE9E140572360037B284 /* Default-Landscape.png */,
 				0DD3EE9F140572360037B284 /* Default-Portrait.png */,
 				0D2DCB3B13EFFDFA009CAE48 /* bell.mp3 */,
@@ -195,6 +198,7 @@
 				0D2DCB4113EFFFE9009CAE48 /* SettingsController.xib in Resources */,
 				0DD3EEA0140572360037B284 /* Default-Landscape.png in Resources */,
 				0DD3EEA1140572360037B284 /* Default-Portrait.png in Resources */,
+				0DD3EEA3140573B70037B284 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
