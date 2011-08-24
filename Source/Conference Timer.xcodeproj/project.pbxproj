@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D2DCAF913EFFB07009CAE48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2DCAF813EFFB07009CAE48 /* UIKit.framework */; };
+		0D2DCAFB13EFFB07009CAE48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2DCAFA13EFFB07009CAE48 /* Foundation.framework */; };
+		0D2DCAFD13EFFB07009CAE48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2DCAFC13EFFB07009CAE48 /* CoreGraphics.framework */; };
+		0D2DCB1B13EFFCE3009CAE48 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DCB1913EFFCE3009CAE48 /* Application.m */; };
+		0D2DCB1C13EFFCE3009CAE48 /* Bootstrap.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DCB1A13EFFCE3009CAE48 /* Bootstrap.xib */; };
+		0D2DCB2013EFFCE8009CAE48 /* MainScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DCB1E13EFFCE8009CAE48 /* MainScreenController.m */; };
+		0D2DCB2113EFFCE8009CAE48 /* MainScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DCB1F13EFFCE8009CAE48 /* MainScreenController.xib */; };
+		0D2DCB2B13EFFD66009CAE48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DCB2913EFFD66009CAE48 /* main.m */; };
+		0D2DCB3C13EFFDFA009CAE48 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DCB3B13EFFDFA009CAE48 /* bell.mp3 */; };
+		0D2DCB4013EFFFE9009CAE48 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DCB3E13EFFFE9009CAE48 /* SettingsController.m */; };
+		0D2DCB4113EFFFE9009CAE48 /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DCB3F13EFFFE9009CAE48 /* SettingsController.xib */; };
+		0D2DCB4413F00766009CAE48 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DCB4313F00766009CAE48 /* Factory.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D2DCAF413EFFB07009CAE48 /* Conference Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conference Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D2DCAF813EFFB07009CAE48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0D2DCAFA13EFFB07009CAE48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0D2DCAFC13EFFB07009CAE48 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0D2DCB1813EFFCE3009CAE48 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Application.h; path = Application/Application.h; sourceTree = SOURCE_ROOT; };
+		0D2DCB1913EFFCE3009CAE48 /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Application.m; path = Application/Application.m; sourceTree = SOURCE_ROOT; };
+		0D2DCB1A13EFFCE3009CAE48 /* Bootstrap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Bootstrap.xib; path = Application/Bootstrap.xib; sourceTree = SOURCE_ROOT; };
+		0D2DCB1D13EFFCE8009CAE48 /* MainScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScreenController.h; path = "Main Screen/MainScreenController.h"; sourceTree = SOURCE_ROOT; };
+		0D2DCB1E13EFFCE8009CAE48 /* MainScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScreenController.m; path = "Main Screen/MainScreenController.m"; sourceTree = SOURCE_ROOT; };
+		0D2DCB1F13EFFCE8009CAE48 /* MainScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainScreenController.xib; path = "Main Screen/MainScreenController.xib"; sourceTree = SOURCE_ROOT; };
+		0D2DCB2813EFFD66009CAE48 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		0D2DCB2913EFFD66009CAE48 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		0D2DCB2C13EFFD6A009CAE48 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = prefix.pch; path = Application/prefix.pch; sourceTree = SOURCE_ROOT; };
+		0D2DCB3B13EFFDFA009CAE48 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bell.mp3; path = ../Resources/bell.mp3; sourceTree = "<group>"; };
+		0D2DCB3D13EFFFE9009CAE48 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsController.h; path = "Main Screen/SettingsController.h"; sourceTree = SOURCE_ROOT; };
+		0D2DCB3E13EFFFE9009CAE48 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsController.m; path = "Main Screen/SettingsController.m"; sourceTree = SOURCE_ROOT; };
+		0D2DCB3F13EFFFE9009CAE48 /* SettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsController.xib; path = "Main Screen/SettingsController.xib"; sourceTree = SOURCE_ROOT; };
+		0D2DCB4213F00766009CAE48 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Factory.h; path = Application/Factory.h; sourceTree = SOURCE_ROOT; };
+		0D2DCB4313F00766009CAE48 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Factory.m; path = Application/Factory.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D2DCAF113EFFB07009CAE48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D2DCAF913EFFB07009CAE48 /* UIKit.framework in Frameworks */,
+				0D2DCAFB13EFFB07009CAE48 /* Foundation.framework in Frameworks */,
+				0D2DCAFD13EFFB07009CAE48 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D2DCAE913EFFB07009CAE48 = {
+			isa = PBXGroup;
+			children = (
+				0D2DCB4513F00897009CAE48 /* Main Screen */,
+				0D2DCAFE13EFFB07009CAE48 /* Application */,
+				0D2DCB3913EFFDEB009CAE48 /* Resources */,
+				0D2DCAFF13EFFB07009CAE48 /* Supporting Files */,
+				0D2DCAF713EFFB07009CAE48 /* Frameworks */,
+				0D2DCAF513EFFB07009CAE48 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0D2DCAF513EFFB07009CAE48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D2DCAF413EFFB07009CAE48 /* Conference Timer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0D2DCAF713EFFB07009CAE48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D2DCAF813EFFB07009CAE48 /* UIKit.framework */,
+				0D2DCAFA13EFFB07009CAE48 /* Foundation.framework */,
+				0D2DCAFC13EFFB07009CAE48 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D2DCAFE13EFFB07009CAE48 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0D2DCB4213F00766009CAE48 /* Factory.h */,
+				0D2DCB4313F00766009CAE48 /* Factory.m */,
+				0D2DCB1813EFFCE3009CAE48 /* Application.h */,
+				0D2DCB1913EFFCE3009CAE48 /* Application.m */,
+				0D2DCB1A13EFFCE3009CAE48 /* Bootstrap.xib */,
+			);
+			name = Application;
+			path = "Conference Timer";
+			sourceTree = "<group>";
+		};
+		0D2DCAFF13EFFB07009CAE48 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0D2DCB2C13EFFD6A009CAE48 /* prefix.pch */,
+				0D2DCB2813EFFD66009CAE48 /* Info.plist */,
+				0D2DCB2913EFFD66009CAE48 /* main.m */,
+			);
+			name = "Supporting Files";
+			path = "Conference Timer";
+			sourceTree = "<group>";
+		};
+		0D2DCB3913EFFDEB009CAE48 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D2DCB3B13EFFDFA009CAE48 /* bell.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0D2DCB4513F00897009CAE48 /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0D2DCB3D13EFFFE9009CAE48 /* SettingsController.h */,
+				0D2DCB3E13EFFFE9009CAE48 /* SettingsController.m */,
+				0D2DCB3F13EFFFE9009CAE48 /* SettingsController.xib */,
+				0D2DCB1D13EFFCE8009CAE48 /* MainScreenController.h */,
+				0D2DCB1E13EFFCE8009CAE48 /* MainScreenController.m */,
+				0D2DCB1F13EFFCE8009CAE48 /* MainScreenController.xib */,
+			);
+			name = "Main Screen";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0D2DCAF313EFFB07009CAE48 /* Conference Timer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D2DCB1513EFFB08009CAE48 /* Build configuration list for PBXNativeTarget "Conference Timer" */;
+			buildPhases = (
+				0D2DCAF013EFFB07009CAE48 /* Sources */,
+				0D2DCAF113EFFB07009CAE48 /* Frameworks */,
+				0D2DCAF213EFFB07009CAE48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Conference Timer";
+			productName = "Conference Timer";
+			productReference = 0D2DCAF413EFFB07009CAE48 /* Conference Timer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0D2DCAEB13EFFB07009CAE48 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 0D2DCAEE13EFFB07009CAE48 /* Build configuration list for PBXProject "Conference Timer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0D2DCAE913EFFB07009CAE48;
+			productRefGroup = 0D2DCAF513EFFB07009CAE48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D2DCAF313EFFB07009CAE48 /* Conference Timer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D2DCAF213EFFB07009CAE48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D2DCB1C13EFFCE3009CAE48 /* Bootstrap.xib in Resources */,
+				0D2DCB2113EFFCE8009CAE48 /* MainScreenController.xib in Resources */,
+				0D2DCB3C13EFFDFA009CAE48 /* bell.mp3 in Resources */,
+				0D2DCB4113EFFFE9009CAE48 /* SettingsController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D2DCAF013EFFB07009CAE48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D2DCB1B13EFFCE3009CAE48 /* Application.m in Sources */,
+				0D2DCB2013EFFCE8009CAE48 /* MainScreenController.m in Sources */,
+				0D2DCB2B13EFFD66009CAE48 /* main.m in Sources */,
+				0D2DCB4013EFFFE9009CAE48 /* SettingsController.m in Sources */,
+				0D2DCB4413F00766009CAE48 /* Factory.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0D2DCB1313EFFB08009CAE48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		0D2DCB1413EFFB08009CAE48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0D2DCB1613EFFB08009CAE48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Application/prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0D2DCB1713EFFB08009CAE48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Application/prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D2DCAEE13EFFB07009CAE48 /* Build configuration list for PBXProject "Conference Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D2DCB1313EFFB08009CAE48 /* Debug */,
+				0D2DCB1413EFFB08009CAE48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D2DCB1513EFFB08009CAE48 /* Build configuration list for PBXNativeTarget "Conference Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D2DCB1613EFFB08009CAE48 /* Debug */,
+				0D2DCB1713EFFB08009CAE48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0D2DCAEB13EFFB07009CAE48 /* Project object */;
+}
