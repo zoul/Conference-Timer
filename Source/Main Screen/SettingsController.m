@@ -1,7 +1,7 @@
 #import "SettingsController.h"
 
 @implementation SettingsController
-@synthesize stopButton, resetButton, timeSlider, timeLabel, talkInProgress, delegate;
+@synthesize stopButton, resetButton, timeSlider, timeLabel, timeRunning, delegate;
 
 - (void) dealloc
 {
@@ -14,9 +14,9 @@
 
 - (void) updateUI
 {
-    [timeSlider setEnabled:!talkInProgress];
-    [resetButton setEnabled:!talkInProgress];
-    [stopButton setTitle:talkInProgress ? @"Stop" : @"Start" forState:UIControlStateNormal];
+    [timeSlider setEnabled:!timeRunning];
+    [resetButton setEnabled:!timeRunning];
+    [stopButton setTitle:timeRunning ? @"Stop" : @"Start" forState:UIControlStateNormal];
     [timeLabel setText:[NSString stringWithFormat:@"Talk Time: %i minute%s",
         (NSInteger) [timeSlider value], [timeSlider value] == 1 ? "" : "s"]];
 }
@@ -31,7 +31,7 @@
 
 - (IBAction) toggleRunning
 {
-    SEL action = talkInProgress ? @selector(stopCurrentTalk) : @selector(startNewTalk);
+    SEL action = timeRunning ? @selector(stopCurrentTalk) : @selector(startNewTalk);
     [delegate performSelector:action];
 }
 
@@ -60,10 +60,10 @@
 
 #pragma mark Events
 
-- (void) setTalkInProgress: (BOOL) running
+- (void) setTimeRunning: (BOOL) running
 {
-    if (running != talkInProgress) {
-        talkInProgress = running;
+    if (running != timeRunning) {
+        timeRunning = running;
         [self updateUI];
     }
 }

@@ -66,14 +66,14 @@
 {
     NSParameterAssert(![self talkInProgress]);
     [self setSecondsRemaining:[settingsController fullTalkMinutes]*60];
-    [settingsController setTalkInProgress:YES];
+    [settingsController setTimeRunning:YES];
     [self setTimer:[NSTimer scheduledTimerWithTimeInterval:1 target:self
         selector:@selector(updateTime) userInfo:nil repeats:YES]];
 }
 
 - (void) stopCurrentTalk
 {
-    [settingsController setTalkInProgress:NO];
+    [settingsController setTimeRunning:NO];
     [timer invalidate];
     [self setTimer:nil];
 }

@@ -13,7 +13,7 @@
 @property(retain) IBOutlet UILabel  *timeLabel;
 
 @property(assign, nonatomic) NSUInteger fullTalkMinutes;
-@property(assign, nonatomic) BOOL talkInProgress;
+@property(assign, nonatomic) BOOL timeRunning;
 
 @property(assign) id<SettingsDelegate> delegate;
 
