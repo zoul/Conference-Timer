@@ -1,11 +1,11 @@
-#import "SettingsController.h"
+@class SettingsController;
 
-@interface MainScreenController : UIViewController <SettingsDelegate>
+@interface MainScreenController : UIViewController
 
-@property(retain) IBOutlet UILabel *timeLabel;
+@property(retain) IBOutlet UILabel  *display;
+@property(retain) AVAudioPlayer *bellSound;
 @property(retain) SettingsController *settingsController;
-@property(readonly) BOOL talkInProgress;
 
-- (IBAction) displaySettings: (id) sender;
+- (IBAction) displaySettingsFrom: (UIButton*) sender;
 
 @end

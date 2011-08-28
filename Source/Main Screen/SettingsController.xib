@@ -99,7 +99,6 @@
 						<string key="NSFrame">{{234, 97}, {94, 37}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:237</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -4612,30 +4611,30 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">talkTimeDidChange:</string>
+						<string key="label">changeTalkDuration:</string>
 						<reference key="source" ref="193583490"/>
 						<reference key="destination" ref="841351856"/>
 						<int key="IBEventType">13</int>
 					</object>
-					<int key="connectionID">10</int>
+					<int key="connectionID">17</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">toggleRunning</string>
+						<string key="label">toggleClock</string>
 						<reference key="source" ref="298994392"/>
 						<reference key="destination" ref="841351856"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">16</int>
+					<int key="connectionID">19</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">resetTime</string>
+						<string key="label">resetTalkTime</string>
 						<reference key="source" ref="642458451"/>
 						<reference key="destination" ref="841351856"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">15</int>
+					<int key="connectionID">18</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -4739,7 +4738,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">16</int>
+			<int key="maxID">19</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4751,14 +4750,14 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>resetTime</string>
-							<string>talkTimeDidChange:</string>
-							<string>toggleRunning</string>
+							<string>changeTalkDuration:</string>
+							<string>resetTalkTime</string>
+							<string>toggleClock</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
 							<string>UISlider</string>
+							<string>id</string>
 							<string>id</string>
 						</object>
 					</object>
@@ -4766,22 +4765,22 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>resetTime</string>
-							<string>talkTimeDidChange:</string>
-							<string>toggleRunning</string>
+							<string>changeTalkDuration:</string>
+							<string>resetTalkTime</string>
+							<string>toggleClock</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
-								<string key="name">resetTime</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">talkTimeDidChange:</string>
+								<string key="name">changeTalkDuration:</string>
 								<string key="candidateClassName">UISlider</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">toggleRunning</string>
+								<string key="name">resetTalkTime</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">toggleClock</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>

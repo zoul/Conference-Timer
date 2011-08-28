@@ -1,7 +1,9 @@
 #import "SettingsController.h"
 
+static const NSTimeInterval SecondsPerMinute = 60;
+
 @implementation SettingsController
-@synthesize stopButton, resetButton, timeSlider, timeLabel, timeRunning, delegate;
+@synthesize stopButton, resetButton, timeSlider, timeLabel, clockRunning, delegate;
 
 - (void) dealloc
 {
@@ -14,9 +16,9 @@
 
 - (void) updateUI
 {
-    [timeSlider setEnabled:!timeRunning];
-    [resetButton setEnabled:!timeRunning];
-    [stopButton setTitle:timeRunning ? @"Stop" : @"Start" forState:UIControlStateNormal];
+    [timeSlider setEnabled:!clockRunning];
+    [resetButton setEnabled:!clockRunning];
+    [stopButton setTitle:clockRunning ? @"Stop" : @"Start" forState:UIControlStateNormal];
     [timeLabel setText:[NSString stringWithFormat:@"Talk Time: %i minute%s",
         (NSInteger) [timeSlider value], [timeSlider value] == 1 ? "" : "s"]];
 }
@@ -29,41 +31,40 @@
 
 #pragma Controls
 
-- (IBAction) toggleRunning
+- (IBAction) toggleClock
 {
-    SEL action = timeRunning ? @selector(stopCurrentTalk) : @selector(startNewTalk);
-    [delegate performSelector:action];
+    [delegate toggleClock];
 }
 
-- (IBAction) resetTime
+- (IBAction) resetTalkTime
 {
     [delegate resetTalkTime];
 }
 
+- (IBAction) changeTalkDuration: (UISlider*) sender
+{
+    [delegate setTalkDuration:[sender value]];
+    [self updateUI];
+}
+
 #pragma mark Talk Time
 
-- (void) setFullTalkMinutes: (NSUInteger) talkTime
+- (void) setTalkDuration: (NSTimeInterval) duration
 {
-    [timeSlider setValue:talkTime];
+    [timeSlider setValue:ceil(duration / SecondsPerMinute)];
 }
 
-- (NSUInteger) fullTalkMinutes
+- (NSTimeInterval) talkDuration
 {
-    return [timeSlider value];
-}
-
-- (IBAction) talkTimeDidChange: (UISlider*) sender
-{
-    [delegate setFullTalkTime:[sender value]];
-    [self updateUI];
+    return floor([timeSlider value]) * SecondsPerMinute;
 }
 
 #pragma mark Events
 
-- (void) setTimeRunning: (BOOL) running
+- (void) setClockRunning: (BOOL) running
 {
-    if (running != timeRunning) {
-        timeRunning = running;
+    if (running != clockRunning) {
+        clockRunning = running;
         [self updateUI];
     }
 }

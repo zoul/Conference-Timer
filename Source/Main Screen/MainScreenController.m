@@ -1,28 +1,20 @@
 #import "MainScreenController.h"
 #import "SettingsController.h"
+#import "Talk.h"
 
-@interface MainScreenController ()
-@property(retain) NSTimer *timer;
-@property(assign) NSUInteger secondsRemaining;
-@property(retain) AVAudioPlayer *bellSound;
+@interface MainScreenController () <TalkDelegate, SettingsDelegate>
+@property(retain) Talk *talk;
 @end
 
 @implementation MainScreenController
-@synthesize timeLabel, settingsController, timer, secondsRemaining, bellSound;
+@synthesize display, settingsController, talk, bellSound;
 
 #pragma mark Initialization
 
-- (void) viewDidLoad
-{
-    [super viewDidLoad];
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"bell" withExtension:@"mp3"];
-    [self setBellSound:[[[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:NULL] autorelease]];
-}
-
 - (void) dealloc
 {
-    [timer release];
-    [timeLabel release];
+    [talk release];
+    [display release];
     [settingsController release];
     [bellSound release];
     [super dealloc];
@@ -30,20 +22,28 @@
 
 - (void) updateUI
 {
-    [timeLabel setText:[NSString stringWithFormat:@"%02i:%02i",
+    NSUInteger secondsRemaining = [talk currentTime];
+    [display setText:[NSString stringWithFormat:@"%02i:%02i",
         secondsRemaining / 60, secondsRemaining % 60]];
+}
+
+- (void) startNewTalk
+{
+    [self setTalk:[Talk talkWithDuration:[settingsController talkDuration]]];
+    [talk setDelegate:self];
 }
 
 - (void) viewWillAppear: (BOOL) animated
 {
     [super viewWillAppear:animated];
     [settingsController setDelegate:self];
-    [self setSecondsRemaining:[settingsController fullTalkMinutes]*60];
+    [self startNewTalk];
     [self updateUI];
 }
 
-- (IBAction) displaySettings: (id) sender
+- (IBAction) displaySettingsFrom: (UIButton*) sender
 {
+    // TODO: The popover probably leaks
     UIPopoverController *popover = [[UIPopoverController alloc]
         initWithContentViewController:settingsController];
     [popover setPopoverContentSize:[[settingsController view] bounds].size];
@@ -51,49 +51,40 @@
         permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
-- (BOOL) talkInProgress
-{
-    return (timer != nil);
-}
-
-- (void) updateTime
-{
-    secondsRemaining--;
-    [self updateUI];
-    if (secondsRemaining == 0) {
-        [bellSound play];
-        [self stopCurrentTalk];
-    }
-}
-
 #pragma mark Settings Delegate
 
-- (void) setFullTalkTime: (NSUInteger) minutes
+- (void) setTalkDuration: (NSTimeInterval) duration
 {
-    [self setSecondsRemaining:minutes*60];
+    [self startNewTalk];
     [self updateUI];
 }
 
-- (void) startNewTalk
+- (void) toggleClock
 {
-    NSParameterAssert(![self talkInProgress]);
-    [self setSecondsRemaining:[settingsController fullTalkMinutes]*60];
-    [settingsController setTimeRunning:YES];
-    [bellSound prepareToPlay];
-    [self setTimer:[NSTimer scheduledTimerWithTimeInterval:1 target:self
-        selector:@selector(updateTime) userInfo:nil repeats:YES]];
-}
-
-- (void) stopCurrentTalk
-{
-    [settingsController setTimeRunning:NO];
-    [timer invalidate];
-    [self setTimer:nil];
+    SEL action = [talk isRunning] ? @selector(stopClock) : @selector(startClock);
+    [talk performSelector:action];
 }
 
 - (void) resetTalkTime
 {
-    [self setSecondsRemaining:[settingsController fullTalkMinutes]*60];
+    [self startNewTalk];
+    [self updateUI];
+}
+
+#pragma mark Talk Delegate
+
+- (void) talkDidStart: (Talk*) talk
+{
+    [settingsController setClockRunning:YES];
+}
+
+- (void) talkDidStop: (Talk*) talk
+{
+    [settingsController setClockRunning:NO];
+}
+
+- (void) talkTimeDidChange: (Talk*) talk
+{
     [self updateUI];
 }
 

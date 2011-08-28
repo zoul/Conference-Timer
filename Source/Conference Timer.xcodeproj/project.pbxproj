@@ -19,6 +19,7 @@
 		0D2DCB4013EFFFE9009CAE48 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DCB3E13EFFFE9009CAE48 /* SettingsController.m */; };
 		0D2DCB4113EFFFE9009CAE48 /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DCB3F13EFFFE9009CAE48 /* SettingsController.xib */; };
 		0D2DCB4413F00766009CAE48 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DCB4313F00766009CAE48 /* Factory.m */; };
+		0D3D1554140A224E000574A1 /* Talk.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D1553140A224E000574A1 /* Talk.m */; };
 		0DD3EE9C14056EF50037B284 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD3EE9B14056EF50037B284 /* AVFoundation.framework */; };
 		0DD3EEA0140572360037B284 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD3EE9E140572360037B284 /* Default-Landscape.png */; };
 		0DD3EEA1140572360037B284 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD3EE9F140572360037B284 /* Default-Portrait.png */; };
@@ -45,6 +46,9 @@
 		0D2DCB3F13EFFFE9009CAE48 /* SettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsController.xib; path = "Main Screen/SettingsController.xib"; sourceTree = SOURCE_ROOT; };
 		0D2DCB4213F00766009CAE48 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Factory.h; path = Application/Factory.h; sourceTree = SOURCE_ROOT; };
 		0D2DCB4313F00766009CAE48 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Factory.m; path = Application/Factory.m; sourceTree = SOURCE_ROOT; };
+		0D3D1552140A224E000574A1 /* Talk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Talk.h; sourceTree = "<group>"; };
+		0D3D1553140A224E000574A1 /* Talk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Talk.m; sourceTree = "<group>"; };
+		0D3D1556140A39FA000574A1 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = SOURCE_ROOT; };
 		0DD3EE9B14056EF50037B284 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0DD3EE9E140572360037B284 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape.png"; path = "../Resources/Default-Landscape.png"; sourceTree = "<group>"; };
 		0DD3EE9F140572360037B284 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "../Resources/Default-Portrait.png"; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		0D2DCAFF13EFFB07009CAE48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0D3D1556140A39FA000574A1 /* Logger.h */,
 				0D2DCB2C13EFFD6A009CAE48 /* prefix.pch */,
 				0D2DCB2813EFFD66009CAE48 /* Info.plist */,
 				0D2DCB2913EFFD66009CAE48 /* main.m */,
@@ -135,6 +140,8 @@
 		0D2DCB4513F00897009CAE48 /* Main Screen */ = {
 			isa = PBXGroup;
 			children = (
+				0D3D1552140A224E000574A1 /* Talk.h */,
+				0D3D1553140A224E000574A1 /* Talk.m */,
 				0D2DCB3D13EFFFE9009CAE48 /* SettingsController.h */,
 				0D2DCB3E13EFFFE9009CAE48 /* SettingsController.m */,
 				0D2DCB3F13EFFFE9009CAE48 /* SettingsController.xib */,
@@ -214,6 +221,7 @@
 				0D2DCB2B13EFFD66009CAE48 /* main.m in Sources */,
 				0D2DCB4013EFFFE9009CAE48 /* SettingsController.m in Sources */,
 				0D2DCB4413F00766009CAE48 /* Factory.m in Sources */,
+				0D3D1554140A224E000574A1 /* Talk.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
