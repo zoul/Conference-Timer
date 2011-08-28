@@ -88,6 +88,11 @@
     [self updateUI];
 }
 
+- (void) talkDidFinish: (Talk*) talk
+{
+    [bellSound play];
+}
+
 #pragma mark Housekeeping
 
 - (BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) interfaceOrientation

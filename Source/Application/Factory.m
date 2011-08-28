@@ -6,7 +6,9 @@
 - (AVAudioPlayer*) buildBellSound
 {
     NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"bell" withExtension:@"mp3"];
-    return [[[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:NULL] autorelease];
+    AVAudioPlayer *sound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:NULL];
+    [sound prepareToPlay];
+    return [sound autorelease];
 }
 
 - (SettingsController*) buildSettingsController

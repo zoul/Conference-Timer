@@ -68,6 +68,7 @@ static const NSTimeInterval DefaultTalkDuration = 15*SecondsPerMinute;
     [self setCurrentTime:MAX(0, currentTime-1)];
     [delegate talkTimeDidChange:self];
     if (currentTime == 0) {
+        [delegate talkDidFinish:self];
         [self stopClock];
     }
 }

@@ -4,6 +4,7 @@
 - (void) talkDidStart: (Talk*) talk;
 - (void) talkDidStop: (Talk*) talk;
 - (void) talkTimeDidChange: (Talk*) talk;
+- (void) talkDidFinish: (Talk*) talk;
 @end
 
 @interface Talk : NSObject
