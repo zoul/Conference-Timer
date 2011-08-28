@@ -7,12 +7,13 @@
 @end
 
 @implementation MainScreenController
-@synthesize display, settingsController, talk, bellSound;
+@synthesize display, settingsController, talk, bellSound, application;
 
 #pragma mark Initialization
 
 - (void) dealloc
 {
+    [application release];
     [talk release];
     [display release];
     [settingsController release];
@@ -76,10 +77,12 @@
 - (void) talkDidStart: (Talk*) talk
 {
     [settingsController setClockRunning:YES];
+    [application setIdleTimerDisabled:YES];
 }
 
 - (void) talkDidStop: (Talk*) talk
 {
+    [application setIdleTimerDisabled:NO];
     [settingsController setClockRunning:NO];
 }
 

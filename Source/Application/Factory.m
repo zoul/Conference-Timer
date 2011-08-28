@@ -22,6 +22,7 @@
 - (MainScreenController*) buildMainScreenController
 {
     MainScreenController *controller = [[MainScreenController alloc] initWithNibName:nil bundle:nil];
+    [controller setApplication:[UIApplication sharedApplication]];
     [controller setSettingsController:[self buildSettingsController]];
     [controller setBellSound:[self buildBellSound]];
     return [controller autorelease];
